@@ -14,6 +14,14 @@ window.addEventListener('click', function (event) {
     modal.style.display = 'none';
   }
 });
+
+const closeBtn = document.getElementById('close-btn');
+
+closeBtn.addEventListener('click', function () {
+  modal.style.display = 'none';
+});
+
+
 function setCookie(name, value, days) {
   const date = new Date();
   date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -58,7 +66,7 @@ function updateCartDisplay() {
   for (const productName in cart) {
     const cartItem = cart[productName];
     const cartItemDiv = document.createElement('div');
-    cartItemDiv.textContent = `${productName} - $${cartItem.price.toFixed(2)} x ${cartItem.quantity}`;
+    cartItemDiv.textContent = `Product: ${productName} - $${cartItem.price.toFixed(2)} x ${cartItem.quantity}`;
     cartItemsElement.appendChild(cartItemDiv);
 
     totalAmount += cartItem.price * cartItem.quantity;
