@@ -7,6 +7,7 @@
   <link rel="shortcut icon" href="./images/cart.png" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css">
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
   <header>
@@ -19,69 +20,15 @@
     <div id="cart-items"></div>
     <p>Total: $<span id="total-amount">0.00</span></p>
   </div>
-  
-  <div class="container">
-    <div class="card">
-      <img src="./images/fish-1.jpeg" alt="Product Image">
-      <h2>Product Name</h2>      <p>Price: $100</p>
-      <button onclick="addToCart('fish-1', 100)" class="btn">Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="./images/fish-2.jpeg" alt="Product Image">
-      <h2>Product Name</h2>
-      <p>Price: $99.99</p>
-      <button onclick="addToCart('fish-2', 99.99)" class="btn">Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="./images/fish-3.jpeg" alt="Product Image">
-      <h2>Product Name</h2>
-      <p>Price: $340</p>
-      <button onclick="addToCart('fish-3', 340)" class="btn">Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="./images/fish-4.jpeg" alt="Product Image">
-      <h2>Product Name</h2>
-      <p>Price: $899</p>
-      <button onclick="addToCart('fish-4', 899)" class="btn">Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="./images/fish-5.jpeg" alt="Product Image">
-      <h2>Product Name</h2>
-      <p>Price: $99.99</p>
-      <button onclick="addToCart('fish-5', 99.99)" class="btn">Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="./images/fish-6.jpeg" alt="Product Image">
-      <h2>Product Name</h2>
-      <p>Price: $100</p>
-      <button onclick="addToCart('fish-6', 100)" class="btn">Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="./images/fish-1.jpeg" alt="Product Image">
-      <h2>Product Name</h2>
-      <p>Price: $459</p>
-      <button onclick="addToCart('fish-7', 459)" class="btn">Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="./images/fish-2.jpeg" alt="Product Image">
-      <h2>Product Name</h2>
-      <p>Price: $78</p>
-      <button onclick="addToCart('fish-8',78)" class="btn">Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="./images/fish-3.jpeg" alt="Product Image">
-      <h2>Product Name</h2>
-      <p>Price: $233</p>
-      <button onclick="addToCart('fish-9', 233)" class="btn">Add to Cart</button>
-    </div>
-    <div class="card">
-      <img src="./images/fish-4.jpeg" alt="Product Image">
-      <h2>Product Name</h2>
-      <p>Price: $245</p>
-      <button onclick="addToCart('fish-10', 245)" class="btn">Add to Cart</button>
-    </div>
+
+  <div id="toast" class="toast">
+    Sucessfully added to cart.
+    <i id="closeIcon" class="bx bx-x toast-close"></i>
   </div>
+  
+    <div class="container" id="productContainer"></div>
 </body>
 <script src="./js/script.js"></script>
+<script src="./js/Load.js"></script>
 </html>
 
